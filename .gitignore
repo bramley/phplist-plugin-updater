@@ -1,0 +1,8 @@
+*cache
+README.html
+
+plugins/UpdaterPlugin/vendor/symfony/filesystem/*
+!plugins/UpdaterPlugin/vendor/symfony/filesystem/LICENSE
+!plugins/UpdaterPlugin/vendor/symfony/filesystem/Filesystem.php
+!plugins/UpdaterPlugin/vendor/symfony/filesystem/LockHandler.php
+!plugins/UpdaterPlugin/vendor/symfony/filesystem/Exception/

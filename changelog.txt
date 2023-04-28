@@ -1,0 +1,3 @@
+version 1.0.0+20230428
+      Based on existing code in the Addons plugin
+
