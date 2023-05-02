@@ -70,7 +70,7 @@ if (isset($_POST['stage'])) {
 
     exit;
 }
-$stage = isset($_GET['stage']) ? $_GET['stage'] : 1;
+$stage = $_GET['stage'] ?? 1;
 
 switch ($stage) {
     case 1:

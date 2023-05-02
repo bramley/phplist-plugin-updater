@@ -229,7 +229,7 @@ class Updater
         $fs->mkdir($backupDir, 0755);
 
         // backup and move the files and directories in the distribution /lists directory
-        $doNotInstall = isset($updaterConfig['do_not_install']) ? $updaterConfig['do_not_install'] : [];
+        $doNotInstall = $updaterConfig['do_not_install'] ?? [];
 
         foreach (scandir($distListsDir) as $file) {
             if ($file == '.' || $file == '..') {
