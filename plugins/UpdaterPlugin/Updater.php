@@ -205,13 +205,18 @@ class Updater
         // create set of specific files and directories to be copied from the backup
         $additionalFiles = [];
 
-        if (realpath($configfile) == "$listsDir/config/config.php") {
-            // config file is in the default location
+        if (realpath($configfile) == realpath("$listsDir/config/config.php")) {
+            // config file is in the default location, restore config.php and any additional files
             $additionalFiles[] = 'config/config.php';
+            $additional = array_diff(scandir("$listsDir/config"), scandir("$distListsDir/config"));
+
+            foreach ($additional as $file) {
+                $additionalFiles[] = "config/$file";
+            }
         }
 
         if (PLUGIN_ROOTDIR == 'plugins' || realpath(PLUGIN_ROOTDIR) == realpath('plugins')) {
-            // plugins are in the default location, copy additional files and directories
+            // plugins are in the default location, restore additional files and directories
             $distPlugins = scandir("$distListsDir/admin/plugins");
             $installedPlugins = scandir("$listsDir/admin/plugins");
             $additional = array_diff($installedPlugins, $distPlugins);
