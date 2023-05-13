@@ -1,3 +1,8 @@
+version 1.0.1+20230518
+      Add extra translations
+      Minor code changes
+      Remove symfony/filesystem package
+
 version 1.0.0+20230428
       Based on existing code in the Addons plugin
 

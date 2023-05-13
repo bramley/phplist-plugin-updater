@@ -10,11 +10,5 @@
     ],
     "homepage": "https://www.phpList.org/",
     "type": "phplist-plugin",
-    "license": "GNU Affero General Public License version 3.0 or later (AGPLv3+)",
-    "config": {
-        "vendor-dir": "plugins/UpdaterPlugin/vendor"
-    },
-    "require": {
-        "symfony/filesystem": "3.4"
-    }
+    "license": "GNU Affero General Public License version 3.0 or later (AGPLv3+)"
 }
