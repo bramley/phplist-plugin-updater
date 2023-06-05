@@ -16,5 +16,6 @@ The recommended way to install is through the Plugins page (menu Config > Manage
 ## Version history ##
 
     version         Description
+    1.1.0+20230606  Restore additional files that are in the config directory
     1.0.1+20230518  Remove symfony/filesystem package
     1.0.0+20230428  Based on updater in the Addons Plugin

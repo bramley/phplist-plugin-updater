@@ -286,6 +286,11 @@ class Updater
         // tidy-up
         $fs->remove($this->distributionDir);
         $this->logger->debug('Deleted distribution directory');
+
+        if ($updaterConfig['delete_archive'] ?? true) {
+            $fs->remove($this->distributionArchive);
+            $this->logger->debug('Deleted distribution archive');
+        }
         $this->logger->debug(sprintf('peak memory usage %s %s', formatBytes(memory_get_peak_usage()), formatBytes(memory_get_peak_usage(true))));
     }
 
