@@ -1,3 +1,6 @@
+version 1.2.0+20230630
+      Add config setting to limit the number of backups
+
 version 1.1.0+20230606
       Restore additional files that are in the config directory
       Delete the distribution archive file
