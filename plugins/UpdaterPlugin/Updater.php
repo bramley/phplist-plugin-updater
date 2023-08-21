@@ -175,11 +175,10 @@ class Updater
         $this->logger->debug(sprintf('peak memory usage %s %s', formatBytes(memory_get_peak_usage()), formatBytes(memory_get_peak_usage(true))));
     }
 
-    public function replaceFiles()
+    public function replaceFiles($listsDir)
     {
-        global $updaterConfig, $pageroot, $configfile;
+        global $updaterConfig, $configfile;
 
-        $listsDir = $_SERVER['DOCUMENT_ROOT'] . $pageroot;
         $backupDir = sprintf('%s/phplist_backup_%s_%s', $this->workDir, VERSION, date('YmdHis'));
 
         // find the "lists" directory within the distribution

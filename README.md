@@ -16,6 +16,7 @@ The recommended way to install is through the Plugins page (menu Config > Manage
 ## Version history ##
 
     version         Description
+    1.2.1+20230822  Remove dependency on $pageroot
     1.2.0+20230630  Add config setting to limit the number of backups
     1.1.0+20230606  Restore additional files that are in the config directory
     1.0.1+20230518  Remove symfony/filesystem package
